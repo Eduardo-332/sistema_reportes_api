@@ -26,3 +26,9 @@ class PokemonRequest(BaseModel):
         description="Estado de la peticion",
         pattern="^(sent|completed|failed|inprogress)$"
     )
+
+    sample_size: Optional[int] = Field(
+        default=None,
+        ge=0,
+        description="Cantidad de pokemons a obtener"
+    )
